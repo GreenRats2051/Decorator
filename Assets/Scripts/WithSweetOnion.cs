@@ -4,14 +4,14 @@
     {
         public WithSweetOnion(Hotdog hotdog) : base(hotdog) { }
 
-        public override string GetName()
+        protected override string GetDecoratorDescription()
         {
-            return decoratedHotdog.GetName() + " с сладким луком";
+            return "с сладким луком";
         }
 
-        public override int GetCost()
+        protected override int GetDecoratorCost()
         {
-            return 260 + decoratedHotdog.GetCost();
+            return 30;
         }
     }
 }

@@ -4,14 +4,14 @@
     {
         public WithPickles(Hotdog hotdog) : base(hotdog) { }
 
-        public override string GetName()
+        protected override string GetDecoratorDescription()
         {
-            return decoratedHotdog.GetName() + " с маринованными огурцами";
+            return "с маринованными огурцами";
         }
 
-        public override int GetCost()
+        protected override int GetDecoratorCost()
         {
-            return 260 + decoratedHotdog.GetCost();
+            return 30;
         }
     }
 }

@@ -11,12 +11,15 @@ namespace Assets.Scripts
 
         public override string GetName()
         {
-            return decoratedHotdog.GetName();
+            return $"{decoratedHotdog.GetName()} ({GetDecoratorDescription()})";
         }
 
         public override int GetCost()
         {
-            return decoratedHotdog.GetCost();
+            return decoratedHotdog.GetCost() + GetDecoratorCost();
         }
+
+        protected abstract string GetDecoratorDescription();
+        protected abstract int GetDecoratorCost();
     }
 }
